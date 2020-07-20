@@ -1,0 +1,23 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "simple express api for Dockerfile example ",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sulthonuladib/nodejs-nginx-docker.git"
+  },
+  "author": "Sulthonul Adib",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sulthonuladib/nodejs-nginx-docker/issues"
+  },
+  "homepage": "https://github.com/sulthonuladib/nodejs-nginx-docker#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  }
+}
