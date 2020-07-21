@@ -4,7 +4,8 @@
   "description": "simple express api for Dockerfile example ",
   "main": "index.js",
   "scripts": {
-    "start": "node ."
+    "start": "node .",
+    "dev": "node ."
   },
   "repository": {
     "type": "git",
