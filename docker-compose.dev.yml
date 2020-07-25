@@ -1,10 +1,9 @@
 version: '3'
-
 services:
   nginx:
     restart: always
     build:
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.dev
       context: ./nginx
     ports:
       - '80:80'
@@ -29,13 +28,15 @@ services:
       - 8080:8080
 
   api:
-    restart: always
+    restart: always  
     build:
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.dev
       context: ./server
-    volumes:
+    volumes: 
       - /app/node_modules
       - ./server:/app
+    links:
+      - db
     ports:
       - '5000:5000'
     depends_on:
@@ -43,7 +44,7 @@ services:
 
   client:
     build:
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.dev
       context: ./client
     volumes:
       - /app/node_modules
